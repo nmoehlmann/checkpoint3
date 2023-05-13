@@ -55,10 +55,27 @@
       <div class="col-12 text-center">
         <h1>Note Pad</h1>
       </div>
-      <form action="">
-        <textarea class="noteForm" name="note" id="" cols="30" rows="20"></textarea>
-        <button onclick="saveNote()">Save Note</button>
+      <div>
+        <form action="" onsubmit="app.notesController.createNote()">
+          <input name="title" type="text" placeholder="Note Title">
+          <button type="submit">Create Note</button>
+        </form>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col"></div>
+      <form action="" onsubmit="app.notesController.saveNote()">
+        <textarea name="" id="noteBody" cols="30" rows="10"></textarea>
+        <button type="submit">Save Note</button>
       </form>
+    </section>
+    <section class="row">
+      <div class="col" id="notesList">
+        <!-- <div>
+          <h1>Note Title</h1>
+          <p>Username</p>
+        </div> -->
+      </div>
     </section>
   </main>
 

@@ -1,4 +1,4 @@
-import { User } from "./Models/Note.js"
+import { Note } from "./Models/Note.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -10,8 +10,11 @@ class AppState extends EventEmitter {
 
   userName = ''
 
-  /** @type {import ('./Models/Note.js').User | null} */
-  activeCard = null
+  /** @type {import('./Models/Note').Note[]} */
+  notes = loadState('notes', [Note])
+
+  /** @type {import('/.Models/Note.js').Note|null} */
+  activeNote = null
 
 }
 

@@ -1,5 +1,5 @@
 import { appState } from "../AppState.js"
-import { User } from "../Models/Note.js"
+import { Note } from "../Models/Note.js"
 
 class UsersService {
   enterUserName(input) {
