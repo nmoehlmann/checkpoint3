@@ -1,6 +1,12 @@
-.noteForm {
-  width: 100%
+:root {
+  --khaki: #c1b098;
+  --thistle: #e9d2f4;
+  --coolgray: #9b9b93;
+  --jet: #39393a;
+  --moonstone: #63b0cd;
 }
+
+/* SECTION Note color custom */
 
 .blue {
   color: blue
@@ -42,6 +48,14 @@
   background-color: pink
 }
 
-.colorPicker:not(.nohover):hover {
-  border: 1px solid black;
+/* SECTION element selectors */
+
+i {
+  font-size: 2.5rem;
 }
+
+p {
+  margin: 0;
+}
+
+

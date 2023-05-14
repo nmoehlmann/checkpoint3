@@ -12,6 +12,7 @@ function _drawNotes() {
   let filterNotes = notes.filter(n => n.user == appState.userName)
   filterNotes.forEach(n => template += n.NotesListTemplate)
   setHTML('notesList', template)
+  _drawNoteCount()
 }
 
 function _drawActiveNote(id) {
@@ -27,6 +28,14 @@ function _drawBlank() {
   setHTML('activeNoteTemplate', template)
 }
 
+function _drawNoteCount() {
+  let notes = appState.notes
+
+  let filterNotes = notes.filter(n => n.user == appState.userName)
+  setHTML('noteCount', filterNotes.length)
+  console.log(filterNotes.length, 'note count')
+}
+
 export class NotesController {
   constructor() {
     appState.on('userName', _drawNotes)
@@ -39,17 +48,22 @@ export class NotesController {
     // let form = event?.target
     // let formData = getFormData(form)
     // notesService.noteColor(formData)
-
     let note = document.getElementById('noteBody')
     let noteBody = note.value
     notesService.saveNote(noteBody)
     console.log(appState.notes)
+
   }
 
   createNote() {
     window.event.preventDefault()
     let form = event?.target
     let formData = getFormData(form)
+
+    if (formData.title == '') {
+      return window.alert('Note must be named before created!')
+    }
+
     formData.user = appState.userName
     notesService.createNote(formData)
     console.log(appState.notes)

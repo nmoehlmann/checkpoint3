@@ -1,6 +1,7 @@
 import { appState } from "../AppState.js"
 import { Note } from "../Models/Note.js"
 import { saveState } from "../Utils/Store.js"
+import { setHTML } from "../Utils/Writer.js"
 
 function _saveNotes() {
     saveState('notes', appState.notes)
@@ -12,6 +13,7 @@ class NotesService{
         let activeNote = appState.activeNote
         activeNote.noteBody = noteBody
         appState.emit('activeNote')
+
         _saveNotes()
     }
 
