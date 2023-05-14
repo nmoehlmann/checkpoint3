@@ -8,6 +8,7 @@ import { Pop } from "../Utils/Pop.js"
 export class UsersController {
   constructor() {
     console.log('user controller online')
+    this.enterUserName()
   }
 
   async enterUserName() {

@@ -1,3 +1,47 @@
 .noteForm {
   width: 100%
 }
+
+.blue {
+  color: blue
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.black {
+  color: black;
+}
+
+.bg-blue {
+  background-color: blue
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-pink {
+  background-color: pink
+}
+
+.colorPicker:not(.nohover):hover {
+  border: 1px solid black;
+}
