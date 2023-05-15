@@ -23,7 +23,7 @@ export class Note {
   get NotesListTemplate() {
     return `
     <div class="col-4 d-flex justify-content-evenly">
-    <div class="elevation-3 p-5" onclick="app.notesController.setActiveNote('${this.id}')">
+    <div class="note p-5" onclick="app.notesController.setActiveNote('${this.id}')">
       <h2><i class="fa-solid fa-note-sticky ${this.color} fs-3 mx-3"></i>${this.title}</h2>
       <div class="d-flex flex-column align-items-center">
         <p class="mb-3">User: ${this.user}</p>
@@ -36,11 +36,11 @@ export class Note {
 
   get ActiveNoteTemplate() {
     return `
-    <section id="activeNoteTemplate" class="row">
-      <div class="col-6">
+    <section id="activeNoteTemplate" class="row p-4">
+      <div class="col-6 px-5">
         <form action="" onsubmit="app.notesController.saveNote()">
           <div class="d-flex flex-column justify-content-center">
-            <textarea name="noteForm" id="noteBody" class="noteBody my-4" cols="80" rows="20">${this.noteBody}</textarea>
+            <textarea name="noteForm" id="noteBody" class="noteBody my-4 fs-3" cols="80" rows="15">${this.noteBody}</textarea>
             <div class="d-flex justify-content-center">
               <button class="btn btn-dark mb-4" type="submit">Save</button>
             </div>
@@ -50,7 +50,7 @@ export class Note {
 
       <div class="col-6 d-flex flex-column justify-content-evenly">
         <section class="row">
-          <div class="col d-flex justify-content-center">
+          <div class="col d-flex justify-content-center elevation-3 activeNoteTitle">
             <h2 class="display-4 fw-bold"><i class="fa-solid fa-note-sticky ${this.color}"></i> ${this.title}</h2>
           </div>
         </section>
@@ -59,7 +59,7 @@ export class Note {
             <p>Date Created: ${this.ComputeDate}</p>
           </div>
         </section>
-        <section class="row text-center">
+        <section class="row text-center elevation-4 activeNoteColorPicker">
           <p class="fs-2">Pick Color</p>
           <div class="col d-flex justify-content-evenly py-4">
             <i onclick="app.notesController.noteColor('red')" class="fa-solid fa-fill-drip red"></i>

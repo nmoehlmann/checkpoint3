@@ -50,12 +50,77 @@
 
 /* SECTION element selectors */
 
+.loginButton:hover {
+  color: aqua;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
 i {
   font-size: 2.5rem;
 }
 
 p {
   margin: 0;
+}
+
+body {
+  background-color: var(--khaki);
+}
+
+header {
+  background-color: var(--jet);
+  border-bottom: 3px solid var(--coolgray);
+  color: white
+}
+
+main {
+  background-color: var(--coolgray)
+}
+
+footer {
+  background-color: var(--jet);
+  color: white;
+  border-top: 3px solid var(--coolgray)
+}
+
+.noteBody {
+  background-color: var(--moonstone);
+  color: white;
+}
+
+.activeNote {
+  background-color: var(--thistle)
+}
+
+.activeNoteTitle {
+  background-color: whitesmoke
+}
+
+.activeNoteColorPicker {
+  background-color: whitesmoke;
+}
+
+.noteCreation {
+  background-color: var(--jet)
+
+}
+
+.noteTitleInput {
+  background-color: var(--moonstone)
+}
+
+.card {
+  background-color: var(--thistle)
+}
+
+.note {
+  background-image: url(https://cdn.pixabay.com/photo/2018/02/16/10/59/post-it-3157412_1280.png);
+  background-size: cover;
+}
+
+.note:hover {
+  cursor: pointer
 }
 
 
